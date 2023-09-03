@@ -34,6 +34,7 @@ public class HomePageController {
             Integer numberOfDices = getNumberOfDicesValue();
             Integer numberOfFaces = getNumberOfFacesValue();
             Integer numberOfRounds = getNumberOfRoundsValue();
+            diceGame.setGameMode(GameMode.SINGLE_DICE);
             if (numberOfFaces != null) {
                 diceGame.setNumberOfFaceVal(numberOfFaces);
                 diceGame.setGameMode(GameMode.SINGLE_DICE);
