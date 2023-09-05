@@ -1,4 +1,4 @@
-package com.docs.roller.game.diceapp.exception;
+package PD;
 
 /**
  * Custom exception to handle dice game errors

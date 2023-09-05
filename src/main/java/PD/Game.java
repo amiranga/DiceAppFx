@@ -1,4 +1,4 @@
-package com.docs.roller.game.diceapp.interfaces;
+package PD;
 
 public interface Game {
     void buildGame();

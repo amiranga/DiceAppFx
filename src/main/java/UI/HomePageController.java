@@ -1,10 +1,9 @@
-package com.docs.roller.game.diceapp;
+package UI;
 
-import com.docs.roller.game.diceapp.constants.DiceGameDefaults;
-import com.docs.roller.game.diceapp.dto.DiceGame;
-import com.docs.roller.game.diceapp.enums.GameMode;
-import com.docs.roller.game.diceapp.exception.DiceGameException;
-import com.docs.roller.game.diceapp.utils.ApplicationUtils;
+import PD.ApplicationUtils;
+import PD.DiceGame;
+import PD.DiceGameDefaults;
+import PD.DiceGameException;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
@@ -16,15 +15,12 @@ public class HomePageController {
     private TextField numberOfDicesInput;
     @FXML
     private TextField numberOfFacesInput;
-    @FXML
-    private TextField numberOfRoundsInput;
 
     @FXML
     protected void onClear() {
         result.setText(DiceGameDefaults.INPUT_VALUE);
         numberOfDicesInput.setText(DiceGameDefaults.INPUT_VALUE);
         numberOfFacesInput.setText(DiceGameDefaults.INPUT_VALUE);
-        numberOfRoundsInput.setText(DiceGameDefaults.INPUT_VALUE);
     }
 
     @FXML
@@ -33,19 +29,11 @@ public class HomePageController {
             DiceGame diceGame = new DiceGame();
             Integer numberOfDices = getNumberOfDicesValue();
             Integer numberOfFaces = getNumberOfFacesValue();
-            Integer numberOfRounds = getNumberOfRoundsValue();
-            diceGame.setGameMode(GameMode.SINGLE_DICE);
             if (numberOfFaces != null) {
                 diceGame.setNumberOfFaceVal(numberOfFaces);
-                diceGame.setGameMode(GameMode.SINGLE_DICE);
             }
             if (numberOfDices != null) {
                 diceGame.setNumberOfDiceVal(numberOfDices);
-                diceGame.setGameMode(GameMode.MULTI_DICE);
-            }
-            if (numberOfRounds != null) {
-                diceGame.setNumberOfRoundVal(numberOfRounds);
-                diceGame.setGameMode(GameMode.MULTI_ROUND);
             }
 
             diceGame.buildGame();
@@ -64,10 +52,6 @@ public class HomePageController {
 
     public Integer getNumberOfFacesValue() {
         return ApplicationUtils.parseInputStringToNumber(numberOfFacesInput.getText());
-    }
-
-    public Integer getNumberOfRoundsValue() {
-        return ApplicationUtils.parseInputStringToNumber(numberOfRoundsInput.getText());
     }
 
     public void showErrorOutput(String msg) {

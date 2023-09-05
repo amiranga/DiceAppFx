@@ -1,7 +1,4 @@
-package com.docs.roller.game.diceapp.dto;
-
-import com.docs.roller.game.diceapp.utils.ApplicationUtils;
-
+package PD;
 
 public class Dice {
     private Integer numberOfFaces;

@@ -11,13 +11,11 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.VBox?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-	  fx:controller="com.docs.roller.game.diceapp.HomePageController">
+	  fx:controller="UI.HomePageController">
 
 	<GridPane>
 		<columnConstraints>
 			<ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="10.0" prefWidth="50.0"/>
-			<ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="100.0"/>
-			<ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0"/>
 			<ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="100.0"/>
 			<ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0"/>
 			<ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="100.0"/>
@@ -36,11 +34,9 @@
 		<children>
 			<Label text="Dices:" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 			<Label text="Faces:" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
-			<Label text="Rounds:" GridPane.columnIndex="5" GridPane.rowIndex="1"/>
 			<TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="numberOfDicesInput"/>
 			<TextField GridPane.columnIndex="3" GridPane.rowIndex="2" fx:id="numberOfFacesInput"/>
-			<TextField GridPane.columnIndex="5" GridPane.rowIndex="2" fx:id="numberOfRoundsInput"/>
-			<GridPane GridPane.columnIndex="7" GridPane.rowIndex="2">
+			<GridPane GridPane.columnIndex="5" GridPane.rowIndex="2">
 				<columnConstraints>
 					<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
 					<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>

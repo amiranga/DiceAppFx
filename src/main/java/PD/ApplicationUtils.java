@@ -1,7 +1,7 @@
-package com.docs.roller.game.diceapp.utils;
+package PD;
 
-import com.docs.roller.game.diceapp.exception.DiceGameException;
-import com.docs.roller.game.diceapp.constants.DiceGameDefaults;
+import PD.DiceGameDefaults;
+import PD.DiceGameException;
 
 import java.util.Random;
 
