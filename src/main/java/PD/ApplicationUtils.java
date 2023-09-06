@@ -7,9 +7,6 @@ import java.util.Random;
 
 public class ApplicationUtils {
     public static Integer parseInputStringToNumber(String str) {
-        if (str == null || "".equals(str.trim())) {
-            return null;
-        }
         try {
             int parsed = Integer.parseInt(str);
             if (parsed < 1) {

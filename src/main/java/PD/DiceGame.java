@@ -10,8 +10,8 @@ public class DiceGame implements Game {
     private final StringBuilder result = new StringBuilder();
     private List<Dice> dices = new ArrayList<>();
     private List<Integer> results;
-    private int numberOfDiceVal = DiceGameDefaults.NUMBER_OF_DICES;
-    private int numberOfFaceVal = DiceGameDefaults.NUMBER_OF_FACES;
+    private int numberOfDiceVal;
+    private int numberOfFaceVal;
 
     public DiceGame() {
     }
